@@ -4,14 +4,14 @@ export default function Hero() {
   return (
     <section className="section-spacing">
       <div className="page-container">
-        <div className="surface-panel grid gap-10 p-8 sm:p-12 lg:grid-cols-[1fr_280px] lg:items-end lg:p-16">
+        <div className="surface-panel grid gap-10 p-8 sm:p-12 lg:grid-cols-[1fr_280px] lg:items-center lg:p-16">
           <div>
             <p className="inline-flex rounded-full border border-[var(--surface-border)] bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-soft)]">
               Digital Product Studio
             </p>
 
             <h1 className="heading-display mt-8 max-w-4xl">
-              Websites and software systems designed to help ambitious businesses
+              Websites and software systems designed to help businesses
               grow.
             </h1>
 
@@ -31,7 +31,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6">
+          <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6 lg:-translate-y-2">
             <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
               Built for growth
             </p>
