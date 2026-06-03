@@ -107,52 +107,48 @@ const processSteps = [
 
 export default function ServicesContent() {
   return (
-    <>
-      <section className="section-spacing">
-        <div className="page-container">
-          <div className="surface-panel grid gap-10 p-8 sm:p-12 lg:grid-cols-[1fr_280px] lg:items-center lg:p-16">
-            <div>
-              <p className="inline-flex rounded-full border border-[var(--surface-border)] bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-soft)]">
-                What we do
+    <div className="section-spacing">
+      <div className="page-container flex flex-col gap-16 sm:gap-20 lg:gap-24">
+        <div className="surface-panel grid gap-10 p-8 sm:p-12 lg:grid-cols-[1fr_280px] lg:items-center lg:p-16">
+          <div>
+            <p className="inline-flex rounded-full border border-[var(--surface-border)] bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-soft)]">
+              What we do
+            </p>
+
+            <h1 className="heading-display mt-8 max-w-4xl">
+              Services built for clarity, performance, and growth.
+            </h1>
+
+            <p className="text-muted mt-6 max-w-2xl text-base sm:text-lg">
+              KIC Software designs and builds modern websites, streamlined
+              interfaces, and custom business tools—focused on quality,
+              usability, and long-term value.
+            </p>
+          </div>
+
+          <div className="lg:-translate-y-2">
+            <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
+                {mockReview.label}
               </p>
-
-              <h1 className="heading-display mt-8 max-w-4xl">
-                Services built for clarity, performance, and growth.
-              </h1>
-
-              <p className="text-muted mt-6 max-w-2xl text-base sm:text-lg">
-                KIC Software designs and builds modern websites, streamlined
-                interfaces, and custom business tools—focused on quality,
-                usability, and long-term value.
+              <p
+                className="mt-3 text-[var(--accent-soft)]"
+                aria-label={`${mockReview.rating} out of 5 stars`}
+              >
+                {"★".repeat(mockReview.rating)}
               </p>
-            </div>
-
-            <div className="lg:-translate-y-2">
-              <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
-                  {mockReview.label}
-                </p>
-                <p
-                  className="mt-3 text-[var(--accent-soft)]"
-                  aria-label={`${mockReview.rating} out of 5 stars`}
-                >
-                  {"★".repeat(mockReview.rating)}
-                </p>
-                <p className="mt-4 text-base leading-relaxed text-white">
-                  &ldquo;{mockReview.quote}&rdquo;
-                </p>
-                <p className="mt-4 text-sm font-semibold text-white">
-                  {mockReview.author}
-                </p>
-                <p className="text-muted mt-1 text-sm">{mockReview.role}</p>
-              </div>
+              <p className="mt-4 text-base leading-relaxed text-white">
+                &ldquo;{mockReview.quote}&rdquo;
+              </p>
+              <p className="mt-4 text-sm font-semibold text-white">
+                {mockReview.author}
+              </p>
+              <p className="text-muted mt-1 text-sm">{mockReview.role}</p>
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="pb-16 sm:pb-20 lg:pb-24">
-        <div className="page-container">
+        <div>
           <div className="mb-10 max-w-2xl">
             <h2 className="text-2xl font-semibold sm:text-3xl">Core services</h2>
             <p className="text-muted mt-3 text-base sm:text-lg">
@@ -189,63 +185,55 @@ export default function ServicesContent() {
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="pb-16 sm:pb-20 lg:pb-24">
-        <div className="page-container">
-          <div className="surface-panel p-8 sm:p-12">
-            <div className="mb-10 max-w-2xl">
-              <h2 className="text-2xl font-semibold sm:text-3xl">How we work</h2>
-              <p className="text-muted mt-3 text-base sm:text-lg">
-                A straightforward process that keeps projects moving without
-                sacrificing quality.
-              </p>
-            </div>
+        <div className="surface-panel p-8 sm:p-12 lg:p-16">
+          <div className="mb-10 max-w-2xl">
+            <h2 className="text-2xl font-semibold sm:text-3xl">How we work</h2>
+            <p className="text-muted mt-3 text-base sm:text-lg">
+              A straightforward process that keeps projects moving without
+              sacrificing quality.
+            </p>
+          </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {processSteps.map((step) => (
-                <div
-                  key={step.step}
-                  className="rounded-2xl border border-white/8 bg-white/[0.02] p-6"
-                >
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--accent-soft)]">
-                    {step.step}
-                  </p>
-                  <h3 className="mt-4 text-lg font-semibold text-white">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted mt-3 text-sm">{step.description}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((step) => (
+              <div
+                key={step.step}
+                className="rounded-2xl border border-white/8 bg-white/[0.02] p-6"
+              >
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--accent-soft)]">
+                  {step.step}
+                </p>
+                <h3 className="mt-4 text-lg font-semibold text-white">
+                  {step.title}
+                </h3>
+                <p className="text-muted mt-3 text-sm">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
 
-      <section className="section-spacing pt-0">
-        <div className="page-container">
-          <div className="surface-panel flex flex-col items-start gap-6 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl font-semibold sm:text-3xl">
-                Ready to start a project?
-              </h2>
-              <p className="text-muted mt-3 text-base sm:text-lg">
-                Tell us what you are building and we will help you shape the
-                right solution.
-              </p>
-            </div>
+        <div className="surface-panel flex flex-col items-start gap-6 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12 lg:p-16">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-semibold sm:text-3xl">
+              Ready to start a project?
+            </h2>
+            <p className="text-muted mt-3 text-base sm:text-lg">
+              Tell us what you are building and we will help you shape the
+              right solution.
+            </p>
+          </div>
 
-            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-              <Link href="/contact" className="button-primary text-center">
-                Start a Project
-              </Link>
-              <Link href="/work" className="button-secondary text-center">
-                View Work
-              </Link>
-            </div>
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <Link href="/contact" className="button-primary text-center">
+              Start a Project
+            </Link>
+            <Link href="/work" className="button-secondary text-center">
+              View Work
+            </Link>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
