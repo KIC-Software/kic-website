@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Modern websites, automation, and digital systems for growing businesses.",
 };
+import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function RootLayout({
   children,
@@ -16,6 +19,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+    </html>
+  );
+}
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body suppressHydrationWarning>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
