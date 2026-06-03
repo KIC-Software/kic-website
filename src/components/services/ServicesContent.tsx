@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+const mockReview = {
+  label: "Client review",
+  quote:
+    "KIC Software took our outdated workflow and turned it into a polished system our team relies on every day.",
+  author: "Sarah Mitchell",
+  role: "Operations Director, Northline Studio",
+  rating: 5,
+};
+
 const services = [
   {
     label: "Websites & Web Apps",
@@ -101,20 +110,43 @@ export default function ServicesContent() {
     <>
       <section className="section-spacing">
         <div className="page-container">
-          <div className="surface-panel p-8 sm:p-12 lg:p-16">
-            <p className="inline-flex rounded-full border border-[var(--surface-border)] bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-soft)]">
-              What we do
-            </p>
+          <div className="surface-panel grid gap-10 p-8 sm:p-12 lg:grid-cols-[1fr_280px] lg:items-center lg:p-16">
+            <div>
+              <p className="inline-flex rounded-full border border-[var(--surface-border)] bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-soft)]">
+                What we do
+              </p>
 
-            <h1 className="heading-display mt-8 max-w-4xl">
-              Services built for clarity, performance, and growth.
-            </h1>
+              <h1 className="heading-display mt-8 max-w-4xl">
+                Services built for clarity, performance, and growth.
+              </h1>
 
-            <p className="text-muted mt-6 max-w-2xl text-base sm:text-lg">
-              KIC Software designs and builds modern websites, streamlined
-              interfaces, and custom business tools—focused on quality,
-              usability, and long-term value.
-            </p>
+              <p className="text-muted mt-6 max-w-2xl text-base sm:text-lg">
+                KIC Software designs and builds modern websites, streamlined
+                interfaces, and custom business tools—focused on quality,
+                usability, and long-term value.
+              </p>
+            </div>
+
+            <div className="lg:-translate-y-2">
+              <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6">
+                <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
+                  {mockReview.label}
+                </p>
+                <p
+                  className="mt-3 text-[var(--accent-soft)]"
+                  aria-label={`${mockReview.rating} out of 5 stars`}
+                >
+                  {"★".repeat(mockReview.rating)}
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-white">
+                  &ldquo;{mockReview.quote}&rdquo;
+                </p>
+                <p className="mt-4 text-sm font-semibold text-white">
+                  {mockReview.author}
+                </p>
+                <p className="text-muted mt-1 text-sm">{mockReview.role}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
