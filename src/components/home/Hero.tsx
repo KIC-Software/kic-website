@@ -31,15 +31,30 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6 lg:-translate-y-2">
-            <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
-              Built for growth
-            </p>
-            <p className="mt-4 text-3xl font-semibold text-white">High-end UI</p>
-            <p className="text-muted mt-3 text-sm">
-              Refined interfaces and fast, reliable software crafted for teams that
-              care about quality.
-            </p>
+          <div className="flex flex-col gap-4 lg:-translate-y-2">
+            <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
+                Built for growth
+              </p>
+              <p className="mt-4 text-3xl font-semibold text-white">High-end UI</p>
+              <p className="text-muted mt-3 text-sm">
+                Refined interfaces and fast, reliable software crafted for teams
+                that care about quality.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-[var(--surface-border)] bg-[linear-gradient(160deg,rgba(157,123,255,0.16),rgba(255,255,255,0.02))] p-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent-soft)]">
+                What we build
+              </p>
+              <p className="mt-4 text-3xl font-semibold text-white">Business tools</p>
+              <ul className="text-muted mt-3 list-none space-y-2 text-sm">
+                <li>Custom dashboards and internal apps</li>
+                <li>Workflow automation and integrations</li>
+                <li>Client portals and booking systems</li>
+                <li>Data tools, reporting, and admin panels</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
