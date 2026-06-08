@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function Header() {
   const navItems = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Work", href: "/work" },
-    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 
