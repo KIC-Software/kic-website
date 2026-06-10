@@ -1,12 +1,12 @@
+import type { Metadata } from "next";
+import AboutContent from "@/components/about/AboutContent";
+
+export const metadata: Metadata = {
+  title: "About | KIC Software",
+  description:
+    "Learn about KIC Software—a digital product studio building modern websites, interfaces, and custom business tools.",
+};
+
 export default function AboutPage() {
-  return (
-    <section className="section-spacing">
-      <div className="page-container">
-        <h1 className="text-3xl font-semibold sm:text-4xl">About KIC Software</h1>
-        <p className="text-muted mt-4 max-w-2xl text-base sm:text-lg">
-          We help businesses grow with reliable, modern software solutions.
-        </p>
-      </div>
-    </section>
-  );
+  return <AboutContent />;
 }
